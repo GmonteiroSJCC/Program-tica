@@ -6,7 +6,7 @@ parceiros = {
     "parceiros (10869286) » ne_10 (11238766) » audio (22958379895)",
     "parceiros (10869286) » ne_10 (11238766) » entretenimento (21722649521)", 
     "parceiros (10869286) » ne_10 (11238766) » educacao (22500047431) » in-article (22501462404)",
-    "parceiros (10869286) » ne_10 (11238766) » educacao (22500047431)"
+    "parceiros (10869286) » ne_10 (11238766) » educacao (22500047431)",
     "parceiros (10869286) » ne_10 (11238766) » home (21723566961)",
     "parceiros (10869286) » ne_10 (11238766) » home (21723566961) » anchor (22835570053)",
     "parceiros (10869286) » ne_10 (11238766) » home (21723566961) » in-article (21814819361)",

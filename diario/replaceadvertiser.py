@@ -56,9 +56,8 @@ def diaemes():
 dia, mes = diaemes()
 
 # Carregar os dados do arquivo CSV da pasta de entrada
-df = pd.read_csv(f"relatorios_in/Relatório de Acompanhamento NE 10 (01_{mes}_2024 - {dia}_{mes}_2024).xlsx - Dados do Relatório.csv", header=0, sep=",")
+df = pd.read_csv(f"../relatorios_in/Relatório de Acompanhamento NE 10 (01_{mes}_2024 - {dia}_{mes}_2024).xlsx - Dados do Relatório.csv", header=0, sep=",")
 
-print(df.head(15))
 #Excluir as colunas 'ID do anunciante' e 'ID do bloco de anúncios'
 df = df.drop(['ID do anunciante','ID do bloco de anúncios'], axis=1)
 
