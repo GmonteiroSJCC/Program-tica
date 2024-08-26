@@ -1,0 +1,3 @@
+Relatório de Acompanhamento NE 10 (01_08_2024 - 00_08_2024)
+Anunciante	Bloco de anúncios	Data	Tamanho do criativo	ID do anunciante	ID do bloco de anúncios	Total de impressões	Total de cliques	Receita total de CPM e de CPC (R$)	eCPM médio total (R$)	Porcentagem do total de impressões visíveis do Active View
+Dados do relatório
