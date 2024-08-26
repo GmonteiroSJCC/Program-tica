@@ -1,5 +1,5 @@
 parceiros = {
-    "Portal NE10" :
+    "NE10" :
     ["parceiros (10869286) » ne_10 (11238766)",
     "parceiros (10869286) » ne_10 (11238766) » amp_stories (22722284121)",
     "parceiros (10869286) » ne_10 (11238766) » anchor (22834406532)",
