@@ -36,7 +36,7 @@ def diaemes():
 dia, mes = diaemes()
 
 # Carregar os dados do arquivo CSV da pasta de entrada
-df = pd.read_csv(f"../relatorios_in/Relatório de Acompanhamento NE 10 (01_{mes}_2024 - {dia}_{mes}_2024).xlsx - Dados do relatório.csv", header=0, sep=",")
+df = pd.read_csv(f"../relatorios_in/Relatório de Acompanhamento NE 10 (01_08_2024 - 31_08_2024).xlsx - Dados do relatório.csv", header=0, sep=",")
 
 #Excluir as colunas 'ID do anunciante' e 'ID do bloco de anúncios'
 df = df.drop(['ID do anunciante','ID do bloco de anúncios'], axis=1)
@@ -68,5 +68,5 @@ for index, row in df.iterrows(): #passa por todas linhas do dataframe e armazena
     df = calcular_receitaliq(df, 'Receita Bruta (R$)', 'Receita Líquida', index) #chama a função para o cálculo da receita líquida
     df['Receita Bruta (R$)'] = df['Receita Bruta (R$)'].replace('.',',')
 
-nomerelatorio = f'Acompanhamento_NE10 {dia}-{mes}.csv'
+nomerelatorio = f'Acompanhamento_NE10 31-08.csv'
 df.to_csv(f'relatorios_out/{nomerelatorio}', index=False)

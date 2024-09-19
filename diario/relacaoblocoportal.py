@@ -1,5 +1,5 @@
 parceiros = {
-    "NE10" :
+    "Portal NE10" :
     ["parceiros (10869286) » ne_10 (11238766)",
     "parceiros (10869286) » ne_10 (11238766) » amp_stories (22722284121)",
     "parceiros (10869286) » ne_10 (11238766) » anchor (22834406532)",
@@ -51,10 +51,8 @@ parceiros = {
     "parceiros (10869286) » ne_10 (11238766) » interior (21737767482) » story (22870966944)",
     "parceiros (10869286) » ne_10 (11238766) » interior (21737767482) » produtos (22024412677) » comidas_gigantes (22024442840)",
     "parceiros (10869286) » ne_10 (11238766) » interior (21737767482) » produtos (22024412677)",
-    "parceiros (10869286) » ne_10 (11238766) » interior (21737767482) » radio_jornal (22042866649) » limoeiro (22042866658) » video (22684272344)"],
-
-    "Jamildo":
-    [],
+    "parceiros (10869286) » ne_10 (11238766) » interior (21737767482) » radio_jornal (22042866649) » limoeiro (22042866658) » video (22684272344)",
+    "parceiros (10869286) » ne_10 (11238766) » interior (21737767482) » interstitial (23202480619)"],
 
     "JC Online":
     ["parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726)",
@@ -89,7 +87,11 @@ parceiros = {
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » jc_digital (22893451057)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » jc_digital (22893451057) » anchor (22903676133)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » jc_digital (22893451057) » in-article (22893950747)",
-    ],
+    "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » brasil (23198728443)",
+    "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » brasil (23198728443) » anchor (23198803477)",
+    "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » economia (21902175256) » anchor (23199693089)",
+    "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » cultura (21902367665) » anchor (23198732268)",
+    "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » coluna_enem (22219887871)"],
     
     "Coluna Vida Fit":
     ["parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » coluna_vida_fit (22219768640)",
@@ -98,16 +100,6 @@ parceiros = {
     "Coluna Meu Pet":
     ["parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » coluna_meu_pet (22220156247)",
      "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » coluna_meu_pet (22220156247) » anchor (23200626941)"],
-    
-    "Coluna Brasil":
-    ["parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » brasil (23198728443)",
-    "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » brasil (23198728443) » anchor (23198803477)"],
-
-    "Coluna Economia":
-    ["parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » economia (21902175256) » anchor (23199693089)"],
-
-    "Coluna Cultura" :
-    ["parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » cultura (21902367665) » anchor (23198732268)"],
     
     "Rádio Jornal":
     ["parceiros (10869286) » ne_10 (11238766) » radio_jornal (21719551231)",
@@ -136,7 +128,12 @@ parceiros = {
      "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » torcedor (22462745544) » anchor (22835339397)",
      "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » torcedor (22462745544) » in-article (22473635649)",
      "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » torcedor (22462745544) » story (22871018926)", 
-     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » torcedor (22462745544) » futebol_na_tv (22958347022)"],
+     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » torcedor (22462745544) » futebol_na_tv (22958347022)",
+     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » torcedor (22462745544) » interstitial (23201383480)"],
+
+     "Interior - Coluna Edicase":
+    ["parceiros (10869286) » ne_10 (11238766) » interior (21737767482) » edicase (23201951482) » anchor (23202852290)",
+    "parceiros (10869286) » ne_10 (11238766) » interior (21737767482) » edicase (23201951482)"],
 
     "TV Jornal":
     ["parceiros (10869286) » ne_10 (11238766) » tv_jornal (17743246)",
