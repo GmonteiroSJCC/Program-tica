@@ -1,6 +1,7 @@
 parceiros = {
     "Portal NE10" :
     ["parceiros (10869286) » ne_10 (11238766)",
+     "parceiros (10869286) » ne_10 (11238766) » interstitial (23203900412)",
     "parceiros (10869286) » ne_10 (11238766) » amp_stories (22722284121)",
     "parceiros (10869286) » ne_10 (11238766) » anchor (22834406532)",
     "parceiros (10869286) » ne_10 (11238766) » audio (22958379895)",
@@ -32,6 +33,7 @@ parceiros = {
     "Receita da Boa":
     ["parceiros (10869286) » ne_10 (11238766) » receita_boa (23166879722)",
      "parceiros (10869286) » ne_10 (11238766) » receita_boa (23166879722) » anchor (23197218187)",
+     "parceiros (10869286) » ne_10 (11238766) » receita_boa (23166879722) » interstitial (23203901141)",
      "parceiros (10869286) » ne_10 (11238766) » receita_boa (23166879722) » in-article (23198148525)"],
     
     "Interior":
@@ -59,6 +61,7 @@ parceiros = {
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » coluna_toques (22219892338)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » amp_stories (22696598094)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » anchor (22834992269)",
+    "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » interstitial (23203901207)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » meupet (22672700745) » in-article (22673286989)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » turismodevalor (22672701000) » in-article (22673287160)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » in-article (21814348402)",
@@ -111,6 +114,7 @@ parceiros = {
     "parceiros (10869286) » ne_10 (11238766) » radio_jornal (21719551231) » in-article (21814456428) » outstream (22691595906)",
     "parceiros (10869286) » ne_10 (11238766) » radio_jornal (21719551231) » story (22871014861)",
     "parceiros (10869286) » ne_10 (11238766) » radio_jornal (21719551231) » app (23085685547)",
+    "parceiros (10869286) » ne_10 (11238766) » radio_jornal (21719551231) » interstitial (23203410312)",
     "parceiros (10869286) » ne_10 (11238766) » radio_jornal (21719551231) » anchor (22834993604) » aovivo (23156845419)"],
 
     "Social 1":
@@ -120,6 +124,7 @@ parceiros = {
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » social1 (22503128490) » anchor (22835572852)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » social1 (22503128490) » in-article (22503434018)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » social1 (22503128490) » story (22871538047)",
+    "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » social1 (22503128490) » interstitial (23203901387)",
     "parceiros (10869286) » ne_10 (11238766) » jornal_do_commercio (21268726) » blog (21725415585) » social1 (22503128490)"],
     
     "Blog do Torcedor":

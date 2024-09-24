@@ -37,42 +37,48 @@ def diaemes():
 
 dia, mes, hoje = diaemes()
 # Carregar os dados do arquivo CSV da pasta de entrada
-df = pd.read_csv(f"../relatorios_in/Relatório de Acompanhamento NE 10 (01_{mes}_2024 - {dia}_{mes}_2024).xlsx - Dados do relatório.csv", header=0, sep=",")
+df = pd.read_csv(f"../relatorios_in/Relatório de Acompanhamento NE 10 (01_{mes}_2024 - {dia}_{mes}_2024).xlsx - Report data.csv", header=0, sep=",")
 
-#Excluir as colunas 'ID do anunciante' e 'ID do bloco de anúncios'
-df = df.drop(['ID do anunciante','ID do bloco de anúncios'], axis=1)
+#Excluir as colunas 'ID do Advertiser' e 'ID do Ad unit'
+df = df.drop(['Advertiser ID','Ad unit ID'], axis=1)
 
 # Chamar a função para formatar a coluna 'Data'
-df = formatar_data(df, 'Data')
+df = formatar_data(df, 'Date')
 
 if hoje == 'Monday':
     dom, sab, sex = int(dia), int(dia)-1, int(dia)-2
     datas_selecionadas = [f'{dom}/09/2024', f'{sab}/09/2024', f'{sex}/09/2024']  # Lista de datas que você quer selecionar
-    df = df[df['Data'].isin(datas_selecionadas)]
+    df = df[df['Date'].isin(datas_selecionadas)]
 else:
     datas_selecionadas = f'{dia}/{mes}/2024'
-    df = df[df['Data'] == datas_selecionadas]
+    df = df[df['Date'] == datas_selecionadas]
 
 print(datas_selecionadas)
-'''df.insert(7,'Receita Líquida', ''*df.shape[0])
+df.insert(7,'Receita Líquida', ''*df.shape[0])
 
 if mes[0] == '0':
     mescoluna = mes[1]
 df.insert(3,'Mês', mescoluna)
 # renomeia a coluna de receita bruta
-df.rename(columns={'Receita total de CPM e de CPC (R$)': 'Receita Bruta (R$)'}, inplace=True)
+df.rename(columns={'Total CPM and CPC revenue (R$)': 'Receita Bruta (R$)',
+                   'Creative size': 'Tamanho do criativo',
+                   'Total impressions': 'Total de impressões',
+                   'Total clicks': 'Total de cliques',
+                   'Total average eCPM (R$)': 'eCPM médio total (R$)',
+                   'Date': 'Data',
+                   'Total Active View % viewable impressions': 'Porcentagem do total de impressões visíveis do Active View',}, inplace=True)
 
 for index, row in df.iterrows(): #passa por todas linhas do dataframe e armazena o indice da coluna em 'index'
-    if df.at[index, 'Anunciante'] == '-': #trocar onde o Anunciante for '-' por 'Áudio (0x0)'
-        df.at[index, 'Anunciante'] = 'Áudio (0x0)'
-    elif df.at[index, 'Anunciante'] == 'Total': #quando chegar na linha total, dar um break para calcular o total na mão
+    if df.at[index, 'Advertiser'] == '-': #trocar onde o Advertiser for '-' por 'Áudio (0x0)'
+        df.at[index, 'Advertiser'] = 'Áudio (0x0)'
+    elif df.at[index, 'Advertiser'] == 'Total': #quando chegar na linha total, dar um break para calcular o total na mão
         break
 
     #substituição dos Blocos de anúncios pelo nome do portal correspondente de acordo com o dicionário em 
     #relacaoblocoportal.py
     for portal in parceiros.keys(): 
-        if df.at[index, 'Bloco de anúncios'] in parceiros[portal]:
-            df.at[index, 'Bloco de anúncios'] = portal
+        if df.at[index, 'Ad unit'] in parceiros[portal]:
+            df.at[index, 'Ad unit'] = portal
             break # Interromper o loop interno após encontrar a primeira correspondência
     if '.' in df.at[index, 'Receita Bruta (R$)']: #o arquivo xlsx coloca pontos para separar unidade de milhar das centenas, então é necessário tratá-los
         df.at[index, 'Receita Bruta (R$)'] = df.at[index, 'Receita Bruta (R$)'].replace('.','')
@@ -81,12 +87,15 @@ for index, row in df.iterrows(): #passa por todas linhas do dataframe e armazena
     df = calcular_receitaliq(df, 'Receita Bruta (R$)', 'Receita Líquida', index) #chama a função para o cálculo da receita líquida
     df['Receita Bruta (R$)'] = df['Receita Bruta (R$)'].replace('.',',')
 
+df.rename(columns={'Advertiser': 'Anunciante',
+                   'Ad unit': 'Bloco de anúncios'}, inplace=True)
+
 relatorio1 = f'Acompanhamento_NE10 Edicase {dia}-{mes}.csv'
-df.to_csv(f'relatorios_out/{relatorio1}', index=False)
+df.to_csv(f'../diarios_out/{relatorio1}', index=False)
 print(relatorio1)
 colunas = ["Coluna Vida Fit", "Coluna Meu Pet"]
 df['Bloco de anúncios'] = df['Bloco de anúncios'].replace(colunas, 'JC Online')
 colunasinterior = ["Interior - Coluna Edicase"]
 df['Bloco de anúncios'] = df['Bloco de anúncios'].replace(colunasinterior, 'Interior')
 relatorio2 = f'Acompanhamento_NE10 {dia}-{mes}.csv'
-df.to_csv(f'relatorios_out/{relatorio2}', index=False)'''
+df.to_csv(f'../diarios_out/{relatorio2}', index=False)
