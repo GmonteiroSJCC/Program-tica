@@ -26,18 +26,27 @@ def calcular_receitaliq(df, coluna_receita, coluna_liquida,index):
     df.at[index, coluna_liquida] = liquida
     return df
 
-def diaemes():
+def manipuladata():
     hoje = pd.Timestamp.now()
     ontem = str(hoje - pd.Timedelta(days=1))
+
+    nome_hoje = hoje.day_name()
+    nome_mes = (hoje - pd.Timedelta(days=1)).month_name()[:3]
     
+
     date = ontem.split(' ')[0]
     ano, mes, dia = date.split('-')
+    if dia[0] == '0':
+        title_day = dia[1]
+    else:
+        title_day = dia
+    
+    return dia, mes, nome_hoje, nome_mes, title_day
 
-    return dia, mes, hoje.day_name()
+dia, mes, hoje, abbmonth, title_day = manipuladata()
 
-dia, mes, hoje = diaemes()
 # Carregar os dados do arquivo CSV da pasta de entrada
-df = pd.read_csv(f"../relatorios_in/Relatório de Acompanhamento NE 10 (01_{mes}_2024 - {dia}_{mes}_2024).xlsx - Report data.csv", header=0, sep=",")
+df = pd.read_csv(f"../relatorios_in/Relatório de Acompanhamento NE 10 ({abbmonth} 1, 2024 - {abbmonth} {title_day}, 2024).xlsx - Report data.csv", header=0, sep=",")
 
 #Excluir as colunas 'ID do Advertiser' e 'ID do Ad unit'
 df = df.drop(['Advertiser ID','Ad unit ID'], axis=1)
@@ -58,8 +67,11 @@ df.insert(7,'Receita Líquida', ''*df.shape[0])
 
 if mes[0] == '0':
     mescoluna = mes[1]
+else:
+    mescoluna = mes
 df.insert(3,'Mês', mescoluna)
-# renomeia a coluna de receita bruta
+
+
 df.rename(columns={'Total CPM and CPC revenue (R$)': 'Receita Bruta (R$)',
                    'Creative size': 'Tamanho do criativo',
                    'Total impressions': 'Total de impressões',
@@ -68,6 +80,7 @@ df.rename(columns={'Total CPM and CPC revenue (R$)': 'Receita Bruta (R$)',
                    'Date': 'Data',
                    'Total Active View % viewable impressions': 'Porcentagem do total de impressões visíveis do Active View',}, inplace=True)
 
+                   
 for index, row in df.iterrows(): #passa por todas linhas do dataframe e armazena o indice da coluna em 'index'
     if df.at[index, 'Advertiser'] == '-': #trocar onde o Advertiser for '-' por 'Áudio (0x0)'
         df.at[index, 'Advertiser'] = 'Áudio (0x0)'
